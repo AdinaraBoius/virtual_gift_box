@@ -16,6 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $confirmPassword = $_POST['confirmPassword'];
 
     // --- Validasi Sederhana ---
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header('Location: login-form.php?error=Email tidak valid');
+        exit;
+    }
     if (empty($username) || empty($email) || empty($password)) {
         header('Location: register-form.php?error=Data tidak lengkap');
         exit;

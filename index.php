@@ -341,7 +341,7 @@ session_start();
 
                 // Alihkan ke halaman view_gift_page.php dengan kode sebagai parameter GET
                 // Ini akan membuat URL seperti: view_gift_page.php?kode=KADO123XYZ
-                window.location.href = `view_gift_page.php?kode=${encodeURIComponent(kode.trim())}`;
+                window.location.href = `view_gift_page.php?code=${encodeURIComponent(kode.trim())}`;
             });
         }
         });

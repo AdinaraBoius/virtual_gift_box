@@ -64,14 +64,14 @@ $animasiList = $stmta->fetchAll(PDO::FETCH_ASSOC);
                     <div>
                         <label for="recipientName" class="block text-sm font-medium text-gray-700">Nama Penerima:</label>
                         <input type="text" id="recipientName" name="recipient_name" required
-                               class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-                               placeholder="Nama Penerima Kado" />
+                                class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+                                placeholder="Nama Penerima Kado" />
                     </div>
                     <div>
                         <label for="recipientEmail" class="block text-sm font-medium text-gray-700">Email Penerima:</label>
                         <input type="email" id="recipientEmail" name="recipient_email" required
-                               class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-                               placeholder="email@penerima.com" />
+                                class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+                                placeholder="email@penerima.com" />
                     </div>
                     <div>
                         <label for="relationship" class="block text-sm font-medium text-gray-700">Hubungan:</label>
@@ -134,7 +134,7 @@ $animasiList = $stmta->fetchAll(PDO::FETCH_ASSOC);
 
                     <!-- Pilih Animasi -->
                     <div>
-                        <label for="animation" class="block text-sm font-medium text-gray-700">Pilih Animasi:</label>
+                        <label for="animation" class="block text-sm font-medium text-gray-700">Pilih Animasi (Rp. 5.000):</label>
                         <select id="animation" name="animation_id"
                                 class="mt-1 block w-full px-3 py-2 border bg-white rounded-md focus:ring-pink-500 focus:border-pink-500 sm:text-sm">
                             <option value="">Tanpa Animasi</option>
@@ -148,10 +148,10 @@ $animasiList = $stmta->fetchAll(PDO::FETCH_ASSOC);
 
                     <!-- Pesan Personal -->
                     <div>
-                        <label for="messageText" class="block text-sm font-medium text-gray-700">Pesan Personal:</label>
+                        <label for="messageText" class="block text-sm font-medium text-gray-700">Pesan Personal (Rp. 2.000):</label>
                         <textarea id="messageText" name="message_text" rows="4"
-                                  class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-                                  placeholder="Tulis pesan..."></textarea>
+                                    class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+                                    placeholder="Tulis pesan..."></textarea>
                     </div>
                 </div>
             </fieldset>
@@ -159,7 +159,7 @@ $animasiList = $stmta->fetchAll(PDO::FETCH_ASSOC);
             <!-- Tombol -->
             <div class="flex justify-end space-x-4 pt-4">
                 <a href="index.php"
-                   class="px-6 py-2 border rounded-md text-gray-700 hover:bg-gray-50">Batal</a>
+                    class="px-6 py-2 border rounded-md text-gray-700 hover:bg-gray-50">Batal</a>
                 <button type="submit"
                         class="px-6 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600">Lanjut ke Pembayaran</button>
             </div>

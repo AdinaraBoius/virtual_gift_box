@@ -46,7 +46,7 @@ session_start();
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Alamat Email</label>
                 <div class="mt-1">
-                    <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm" placeholder="anda@email.com" />
+                    <input id="email" name="email" type="email" autocomplete="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Masukkan email valid, misal: user@domain.com" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm" placeholder="anda@email.com" />
                 </div>
             </div>
 
@@ -64,6 +64,17 @@ session_start();
             </div>
         </form>
 
+        <script>
+            document.getElementById('email').addEventListener('input', function() {
+                const regex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+                if (!regex.test(this.value)) {
+                    this.setCustomValidity("Email tidak valid");
+                } else {
+                    this.setCustomValidity("");
+                }
+            });
+        </script>
+        
         <p class="mt-8 text-center text-sm text-gray-600">
             Belum punya akun? <a href="register-form.php" class="font-medium text-pink-600 hover:text-pink-500">Daftar di sini</a>
         </p>

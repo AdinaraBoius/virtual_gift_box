@@ -68,6 +68,17 @@ session_start();
             </div>
         </form>
 
+        <script>
+            document.getElementById('email').addEventListener('input', function() {
+                const regex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+                if (!regex.test(this.value)) {
+                    this.setCustomValidity("Email tidak valid");
+                } else {
+                    this.setCustomValidity("");
+                }
+            });
+        </script>
+
         <?php if (isset($_GET['error'])): ?>
             <div class="mt-4 p-3 rounded-md text-sm bg-red-100 text-red-700 text-center">
                 <?php echo htmlspecialchars($_GET['error']); ?>
